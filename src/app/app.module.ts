@@ -14,11 +14,12 @@ import { NewTrainingComponent } from './training/new-training/new-training.compo
 import { PastTrainingsComponent } from './training/past-trainings/past-trainings.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { AppRoutingModule } from './app-routing.module';
-import {MatListModule, MatProgressSpinnerModule, MatSelectModule} from '@angular/material';
+import {MatListModule, MatProgressSpinnerModule, MatSelectModule, MatTableModule} from '@angular/material';
 import { HeaderComponent } from './navigation/header/header.component';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 import {StopTrainingComponent} from './training/current-training/stop-training.component';
 import {AuthService} from './auth/auth.service';
+import {TrainingService} from './training/training.service';
 
 
 @NgModule({
@@ -46,8 +47,9 @@ import {AuthService} from './auth/auth.service';
     MatListModule,
     MatSelectModule,
     MatProgressSpinnerModule,
+    MatTableModule,
   ],
-  providers: [AuthService],
+  providers: [AuthService, TrainingService],
   bootstrap: [AppComponent],
   entryComponents: [StopTrainingComponent]
 })
