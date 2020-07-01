@@ -14,7 +14,14 @@ import { NewTrainingComponent } from './training/new-training/new-training.compo
 import { PastTrainingsComponent } from './training/past-trainings/past-trainings.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { AppRoutingModule } from './app-routing.module';
-import {MatListModule, MatProgressSpinnerModule, MatSelectModule, MatTableModule} from '@angular/material';
+import {
+  MatListModule,
+  MatPaginatorModule,
+  MatProgressSpinnerModule,
+  MatSelectModule,
+  MatSortModule,
+  MatTableModule
+} from '@angular/material';
 import { HeaderComponent } from './navigation/header/header.component';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 import {StopTrainingComponent} from './training/current-training/stop-training.component';
@@ -48,6 +55,8 @@ import {TrainingService} from './training/training.service';
     MatSelectModule,
     MatProgressSpinnerModule,
     MatTableModule,
+    MatSortModule,
+    MatPaginatorModule,
   ],
   providers: [AuthService, TrainingService],
   bootstrap: [AppComponent],
